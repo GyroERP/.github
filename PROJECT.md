@@ -113,17 +113,17 @@ Use the **Status** field on [GyroERP Development](https://github.com/orgs/GyroER
 ### 3. Start work
 
 1. Move the card to **In progress**.
-2. Create a branch from `main`:
+2. **Always branch from `development`** (backend), not `main`:
 
 ```bash
-git checkout main
-git pull
+git fetch origin
+git checkout development
+git pull origin development
 git checkout -b feature/123-short-description   # features
 git checkout -b fix/123-short-description       # bugs
-git checkout -b task/123-short-description      # tasks
 ```
 
-Use the **issue number** in the branch name.
+Use the **issue number** in the branch name. See [backend BRANCHING.md](https://github.com/GyroERP/backend/blob/development/BRANCHING.md).
 
 ### 4. Open a pull request
 
@@ -133,11 +133,12 @@ PR title format:
 type: short description (#123)
 ```
 
+**Feature/fix PRs target `development`**, not `main`.
+
 Examples:
 
-- `feat: add stock transfer API (#42)`
+- `feat: add GyroERP kernel scaffold (#12)`
 - `fix: correct invoice total rounding (#87)`
-- `docs: update Docker setup guide (#15)`
 
 PR body must include:
 
@@ -153,13 +154,36 @@ Brief description of the change.
 
 Use the correct repo prefix: `GyroERP/backend#`, `GyroERP/frontend#`, or `GyroERP/database#`.
 
-### 5. Review and merge
+### 5. Promote through release pipeline (backend)
+
+After merge to `development`, code moves via **promotion PRs**:
+
+```
+development → staging → beta-release → release/x.y.z → main
+```
+
+Each stage requires CI + QA sign-off. See [RELEASE.md](https://github.com/GyroERP/backend/blob/development/RELEASE.md).
+
+### 6. Review and merge
 
 1. Move the project card to **In review**.
 2. Wait for **CI checks** to pass.
 3. Obtain **one approving review** (branch protection).
-4. Merge via GitHub UI (squash on backend, merge commit on database).
-5. Move the card to **Done**.
+4. Merge via GitHub UI.
+5. Move the card to **Done** when deployed to the target environment.
+
+---
+
+## Branching rules (backend)
+
+| Rule | Requirement |
+|------|-------------|
+| New feature/fix | Branch from `development` |
+| Branch name | `feature/<issue#>-name` or `fix/<issue#>-name` |
+| Direct push to protected branches | **Never** |
+| Production release | Only via `release/x.y.z` → `main` + tag `vX.Y.Z` |
+
+Full details: [BRANCHING.md](https://github.com/GyroERP/backend/blob/development/BRANCHING.md)
 
 ---
 
