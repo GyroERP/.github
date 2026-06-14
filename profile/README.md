@@ -169,7 +169,7 @@ We welcome thoughtful contributions that align with our license and code of cond
 
 | Resource | Link |
 |----------|------|
-| **Project board** | [**GyroERP Development**](https://github.com/orgs/GyroERP/projects/2) |
+| **Project board** | [**GyroERP Development**](https://github.com/orgs/GyroERP/projects/3) |
 | Ticket workflow | [PROJECT.md](https://github.com/GyroERP/.github/blob/main/PROJECT.md) |
 | Contributing | [CONTRIBUTING.md](https://github.com/GyroERP/backend/blob/main/CONTRIBUTING.md) |
 | Code of Conduct | [CODE_OF_CONDUCT.md](https://github.com/GyroERP/backend/blob/main/CODE_OF_CONDUCT.md) |

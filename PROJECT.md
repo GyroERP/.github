@@ -13,7 +13,7 @@ all GyroERP repositories using **GitHub Issues** and **GitHub Projects**.
 | **GitHub Projects** | Source of truth for *status* (Backlog → Done) across all repos |
 | **Pull Requests** | Implementation linked to issues via `Fixes #123` |
 
-**Organization project board:** [GyroERP Development](https://github.com/orgs/GyroERP/projects/2)
+**Organization project board:** [GyroERP Development](https://github.com/orgs/GyroERP/projects/3)
 
 ---
 
@@ -103,7 +103,7 @@ Use the **Status** field on [GyroERP Development](https://github.com/orgs/GyroER
 
 ### 2. Add to the project board
 
-1. Open [GyroERP Development](https://github.com/orgs/GyroERP/projects/2).
+1. Open [GyroERP Development](https://github.com/orgs/GyroERP/projects/3).
 2. Click **Add item** → search the issue number → add it.
 3. Set **Status** to `Backlog` or `Ready`.
 4. Set **Priority**, **Type**, and **Module** fields to match the issue.
@@ -188,7 +188,7 @@ For large work:
 ## Quick links
 
 - [Organization profile](https://github.com/GyroERP)
-- [Project board](https://github.com/orgs/GyroERP/projects/2)
+- [Project board](https://github.com/orgs/GyroERP/projects/3)
 - [Backend issues](https://github.com/GyroERP/backend/issues)
 - [Frontend issues](https://github.com/GyroERP/frontend/issues)
 - [Database issues](https://github.com/GyroERP/database/issues)
