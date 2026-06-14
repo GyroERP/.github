@@ -1,0 +1,90 @@
+name: Feature request
+description: Request a new capability or improvement
+title: "[Feature]: "
+labels:
+  - type:feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Request a **feature** using this template. Describe the business problem first.
+        Acceptance is at the discretion of GyroERP maintainers.
+
+  - type: dropdown
+    id: repository
+    attributes:
+      label: Primary repository
+      options:
+        - backend
+        - frontend
+        - database
+        - multiple
+    validations:
+      required: true
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: ERP module
+      options:
+        - Platform / infrastructure
+        - Inventory
+        - Sales
+        - Purchasing
+        - Finance
+        - Operations
+        - Administration
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - critical
+        - high
+        - medium
+        - low
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What business need does this address?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How will we know this is done?
+      placeholder: "- [ ] ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Contribution terms
+      options:
+        - label: I understand this project is governed by the GyroERP Community License and CONTRIBUTING.md
+          required: true

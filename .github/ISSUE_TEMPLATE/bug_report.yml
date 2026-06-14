@@ -1,0 +1,89 @@
+name: Bug report
+description: Report incorrect or broken behavior
+title: "[Bug]: "
+labels:
+  - type:bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report a **bug** using this template. Do not include secrets, credentials,
+        or customer data. For security vulnerabilities, see [SECURITY.md](https://github.com/GyroERP/backend/blob/main/SECURITY.md).
+
+  - type: dropdown
+    id: repository
+    attributes:
+      label: Affected repository
+      options:
+        - backend
+        - frontend
+        - database
+        - multiple / unsure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: ERP module
+      options:
+        - Platform / infrastructure
+        - Inventory
+        - Sales
+        - Purchasing
+        - Finance
+        - Operations
+        - Administration
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - critical
+        - high
+        - medium
+        - low
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: "1. ... 2. ... 3. ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, screenshots, or errors
+      render: shell
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Contribution terms
+      options:
+        - label: I understand this project is governed by the GyroERP Community License and CONTRIBUTING.md
+          required: true

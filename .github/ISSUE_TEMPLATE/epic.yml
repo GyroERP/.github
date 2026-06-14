@@ -1,0 +1,71 @@
+name: Epic
+description: Large initiative spanning multiple issues or repositories
+title: "[Epic]: "
+labels:
+  - type:epic
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Create an **epic** to track a large body of work. Link child issues with
+        "Part of #EPIC_NUMBER" or task lists in this issue description.
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: ERP module
+      options:
+        - Platform / infrastructure
+        - Inventory
+        - Sales
+        - Purchasing
+        - Finance
+        - Operations
+        - Administration
+        - Cross-cutting
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - critical
+        - high
+        - medium
+        - low
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Epic goal
+      description: What outcome are we delivering?
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Which repos and areas are involved?
+    validations:
+      required: true
+
+  - type: textarea
+    id: child_issues
+    attributes:
+      label: Planned child issues
+      placeholder: "- [ ] #issue — description"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Contribution terms
+      options:
+        - label: I understand this project is governed by the GyroERP Community License and CONTRIBUTING.md
+          required: true

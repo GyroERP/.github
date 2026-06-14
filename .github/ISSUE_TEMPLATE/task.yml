@@ -1,0 +1,65 @@
+name: Task
+description: Maintenance, refactor, CI, docs, or technical chore
+title: "[Task]: "
+labels:
+  - type:task
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Create a **task** for technical work that is not a user-facing feature or bug fix
+        (documentation, CI, refactoring, dependency updates, tooling).
+
+  - type: dropdown
+    id: repository
+    attributes:
+      label: Repository
+      options:
+        - backend
+        - frontend
+        - database
+        - .github (org)
+        - multiple
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - high
+        - medium
+        - low
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Task summary
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Implementation notes
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: This task has a clear definition of done
+        - label: Linked related issues or epics (if any)
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Contribution terms
+      options:
+        - label: I understand this project is governed by the GyroERP Community License and CONTRIBUTING.md
+          required: true

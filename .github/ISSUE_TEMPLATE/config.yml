@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: GyroERP Project board
+    url: https://github.com/orgs/GyroERP/projects/2
+    about: View all tickets on the organization project board
+  - name: Workflow guide
+    url: https://github.com/GyroERP/.github/blob/main/PROJECT.md
+    about: How to create and manage GyroERP tickets
+  - name: Commercial licensing
+    url: https://github.com/GyroERP/backend#license
+    about: Commercial use, redistribution, or SaaS licensing
+  - name: Security vulnerability
+    url: https://github.com/GyroERP/backend/blob/main/SECURITY.md
+    about: Report security issues privately — do not open a public issue
